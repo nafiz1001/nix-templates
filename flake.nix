@@ -10,6 +10,16 @@
         description = "Rust template, using Naersk";
       };
 
+      go = {
+        path = ./go;
+        description = "Go template";
+      };
+
+      javascript = {
+        path = ./javascript;
+        description = "Javascript template";
+      };
+
     };
   };
 }

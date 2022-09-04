@@ -29,7 +29,7 @@
             rustfmt
             pre-commit
             rustPackages.clippy
-            lldb # rust
+            lldb
           ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
         };

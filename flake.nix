@@ -20,6 +20,11 @@
         description = "Javascript template";
       };
 
+      python = {
+        path = ./python;
+        description = "Python template";
+      };
+
     };
   };
 }

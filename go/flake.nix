@@ -28,12 +28,24 @@
                 doCheck = false;
                 vendorSha256 = "sha256-x2cz8bvvS6ozroum33VsCR74B6azC6myzLmm8Tn0QDA=";
               };
+              gotools = buildGoModule {
+                name = "gotools";
+                src = fetchFromGitHub {
+                  owner = "dominikh";
+                  repo = "go-tools";
+                  rev = "v0.3.3";
+                  sha256 = "sha256-Yli+8gMoRRyNqOgFRv/uyFBVXdIlDH0tfZzvfTYBPyU=";
+                };
+                doCheck = false;
+                subPackages = [ "cmd/staticcheck" ];
+                vendorSha256 = "sha256-19uLCtKuuZoVwC4SUKvYGWi2ryqAQbcKXY1iNjIqyn8=";
+              };
             };
           in
           with pkgs; mkShell {
             buildInputs = [
               go
-              gotools
+              devtools.gotools
               gocode
               gocode-gomod
               go-outline

@@ -44,8 +44,8 @@
               # staticcheck (in gotools)
               golangci-lint
               revive
-              delve
               gopls
+              delve
             ];
           };
       });

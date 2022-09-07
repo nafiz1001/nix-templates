@@ -17,7 +17,9 @@
         devShell = with pkgs; mkShell {
           buildInputs = [
             stdenv.cc.cc.lib
-            (python38.withPackages (p: with p; [ pip virtualenv ]))
+            python310
+            python310.pip
+            python310.virtualenv
             pipenv
             poetry
             conda

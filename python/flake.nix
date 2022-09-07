@@ -20,6 +20,7 @@
             (python38.withPackages (p: with p; [ pip virtualenv ]))
             pipenv
             poetry
+            conda
           ];
 
           shellHook = ''

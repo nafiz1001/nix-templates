@@ -15,8 +15,8 @@
         description = "Go template";
       };
 
-      javascript = {
-        path = ./javascript;
+      node = {
+        path = ./node;
         description = "Javascript template";
       };
 

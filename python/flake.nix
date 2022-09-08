@@ -18,8 +18,6 @@
           buildInputs = [
             stdenv.cc.cc.lib
             python310
-            python310Packages.pip
-            python310Packages.virtualenv
             pipenv
             poetry
             conda

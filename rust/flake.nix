@@ -25,11 +25,12 @@
         devShell = with pkgs; mkShell {
           buildInputs = [
             cargo
+            lldb
+            pre-commit
+            rust-analyzer
             rustc
             rustfmt
-            pre-commit
             rustPackages.clippy
-            lldb
           ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
         };

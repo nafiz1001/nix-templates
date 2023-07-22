@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -16,8 +16,10 @@
       {
         devShell = with pkgs; mkShell {
           buildInputs = [
-            nodejs
+            nodejs-18_x
             nodePackages.npm
+            nodePackages.typescript
+            nodePackages.typescript-language-server
           ];
         };
       });
